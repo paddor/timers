@@ -103,7 +103,7 @@ module Timers
 			end
 			
 			@block.call(offset, self)
-			
+		ensure
 			cancel unless recurring
 		end
 		
