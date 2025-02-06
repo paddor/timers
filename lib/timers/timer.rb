@@ -29,6 +29,10 @@ module Timers
 			# If a start offset was supplied, use that, otherwise use the current timers offset.
 			reset(offset || @group.current_offset)
 		end
+
+		def recurring?
+			!!recurring
+		end
 		
 		def paused?
 			@group.paused_timers.include? self
